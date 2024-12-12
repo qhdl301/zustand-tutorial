@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { useCountStore } from "../store";
-import Button from "./Button";
+import { Button } from "../components";
 
-const Counter: FC = () => {
-  const { increment, decrement } = useCountStore();
+const CounterContainer: FC = () => {
+  const { count, increment, decrement } = useCountStore();
 
   const handleIncrement = () => {
     increment(1);
@@ -15,10 +15,11 @@ const Counter: FC = () => {
 
   return (
     <>
+      Hello {count}
       <Button onClick={handleIncrement}>증감</Button>
       <Button onClick={handleDecrement}>감소</Button>
     </>
   );
 };
 
-export default Counter;
+export default CounterContainer;

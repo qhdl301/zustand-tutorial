@@ -1,13 +1,15 @@
-import Counter from "./components/Couter";
-import { useCountStore } from "./store";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { CounterContainer } from "./container";
 
 const App = () => {
-  const { count } = useCountStore();
-
   return (
     <>
-      Hello {count}
-      <Counter />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<CounterContainer />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
