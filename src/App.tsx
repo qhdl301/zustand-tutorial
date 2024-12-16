@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { CounterContainer } from "./container";
+import { GuestBookContainer, CounterContainer } from "./container";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<CounterContainer />} />
+          <Route path="/" element={<GuestBookContainer />} />
+          <Route path="/counter" element={<CounterContainer />} />
         </Routes>
       </BrowserRouter>
     </>
